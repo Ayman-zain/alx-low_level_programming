@@ -6,6 +6,6 @@
 int main(void)
 {
 char test[] = "\"Programming is like building a multilingual puzzle";
-puts(test);	
+puts(test);
 return (0);
 }
