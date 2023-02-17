@@ -1,8 +1,10 @@
 #include <stdio.h>
-/*A function that utilize puts for printing*/
+/*
+ * main return 0
+ * */
 int main(void)
 {
 char test[] = "\"Programming is like building a multilingual puzzle";
-puts (test);	
-return (0);
+puts(test);	
+return(0);
 }
