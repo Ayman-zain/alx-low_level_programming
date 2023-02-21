@@ -10,7 +10,7 @@ int main(void)
 int digi;
 
 for (digi = 0; digi <= 9; digi++)
-	putchar('0'+digi);
+	putchar('0' + digi);
 putchar('\n');
 return (0);
 }
