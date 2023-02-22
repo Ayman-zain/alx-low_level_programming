@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-char message[] = "_putchar\n";
-int SizeOfSTRING = sizeof message;
+char message[] = "_putchar";
+int SizeOfSTRING = sizeof(message);
 int count;
 
 for (count = 0; count < SizeOfSTRING; count++)
@@ -15,5 +15,6 @@ for (count = 0; count < SizeOfSTRING; count++)
 char i = message[count];
 _putchar(i);
 }
+_putchar('\n');
 return (0);
 }
