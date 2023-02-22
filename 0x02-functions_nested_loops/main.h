@@ -1,6 +1,2 @@
-#ifndef putchar
-#define putchar
-
 int _putchar(char c);
-
-#endif
+void print_alphabet(void);
