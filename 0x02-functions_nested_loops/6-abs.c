@@ -8,9 +8,12 @@
 
 int _abs(int r)
 {
-int ABS;
+int ABS = 0;
 
-ABS = r * r;
-ABS = ABS / ABS;
+if (r < 0)
+{
+ABS = r * -1;
 return (ABS);
+}
+return (r);
 }
