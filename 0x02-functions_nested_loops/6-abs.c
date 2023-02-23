@@ -10,7 +10,7 @@ int _abs(int r)
 {
 int ABS;
 
-ABC = r * r;
+ABS = r * r;
 ABS = ABS / ABS;
-return (ABS)
+return (ABS);
 }
