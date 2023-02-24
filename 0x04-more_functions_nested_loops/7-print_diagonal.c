@@ -18,14 +18,14 @@ for (i = 1; i <= n; i++)
 {
 	if (j > 0)
 	{
-	for (j = 0; j <= n; i++)
+	for (j = 0; j <= n; j++)
 		_putchar(32);
 	}
 	_putchar(92);
 	_putchar('\n');
 }
 }
-else 
+else
 {
 _putchar('\n');
 }
