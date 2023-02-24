@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *print_diagonal - a function that draws a diagonal line in the terminal.
+ *print_diagonal - a function that draws a diagonal line in the terminal
  *@n: how long the line will be
  *Return: void
  */
@@ -15,7 +15,7 @@ if (n > 0)
 {
 for (i = 1; i <= n; i++)
 {
-	_putchar(95);
+	_putchar(92);
 	_putchar('\n');
 }
 }
