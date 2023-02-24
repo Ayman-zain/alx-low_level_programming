@@ -14,9 +14,11 @@ for (i = 0; i < 10; i++)
 {
 for (digi = 0; digi <= 14; digi++)
 	{
-	 _putchar(digi + '0');
+	 if (j >= 10)
+	_putchar(j / 10 + '0');
+ 	_putchar(j % 10 + '0');
+
 	}
-_putchar('\n');
 }
 _putchar('\n');
 }
