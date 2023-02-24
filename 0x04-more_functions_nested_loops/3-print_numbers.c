@@ -9,8 +9,8 @@ void print_numbers(void)
 {
 int digi;
 
-for (digi = 0; digi <= 9; digi++)
-	_putchar('0' + digi);
+for (digi = 48; digi <= 57; digi++)
+	_putchar(digi);
 _putchar('\n');
 return (0);
 }
