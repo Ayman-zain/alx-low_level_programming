@@ -20,7 +20,7 @@ int i, j, h;
 	if ((h % 2) == 1)
 		j = ((h + 1) / 2);
 
-	for (i = n; str[i] != '\0'; i++)
+	for (i = j; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	_putchar('\n');
 
