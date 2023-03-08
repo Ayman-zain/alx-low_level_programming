@@ -16,7 +16,7 @@ long h = n;
 
 	for (; n < h; i++)
 	{
-		src[i] = dest[i];
+		dest[i] = src[i];
 		n--;
 	}
 	return (dest);
