@@ -15,7 +15,8 @@ int i;
 if (str == NULL)
 	return (NULL);
 s = malloc(sizeof(char) * sizeof(str));
-
+if (s == NULL)
+	return (NULL);
 for (i = 0; i < (int)sizeof(str); i++)
 	s[i] = str[i];
 return (s);
