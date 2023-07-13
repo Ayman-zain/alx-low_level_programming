@@ -14,7 +14,7 @@ int i;
 
 if (str == NULL)
 	return (NULL);
-s = malloc(sizeof(char) * sizeof(str));
+s = malloc(sizeof(char) * (sizeof(str) + 1));
 if (s == NULL)
 	return (NULL);
 for (i = 0; i < (int)sizeof(str); i++)
