@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -14,10 +15,10 @@ int i;
 
 if (str == NULL)
 	return (NULL);
-s = malloc(sizeof(char) * (sizeof(str) + 1));
+s = malloc(sizeof(char) * (strlen(str) + 1));
 if (s == NULL)
 	return (NULL);
-for (i = 0; i < (int)sizeof(str); i++)
+for (i = 0; i < (int)strlen(str); i++)
 	s[i] = str[i];
 return (s);
 }
