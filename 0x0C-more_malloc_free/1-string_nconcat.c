@@ -22,7 +22,7 @@ if (s3 == NULL)
 i = 0, j = 0;
 while (s1[i] != '\0')
 	s3[j++] = s1[i++];
-if ((int)n >= _strlen(s2))
+if ((int)n >= _strlen(s2 + 1))
 {
 	while (s2[i] != '\0')
 		s3[j++] = s2[i++];
