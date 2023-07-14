@@ -29,7 +29,7 @@ if ((int)n >= _strlen(s2))
 } else
 {
 i = 0;
-while (i < _strlen(s2))
+while ((unsigned int)i < n)
 	s3[j++] = s2[i++];
 }
 s3[j] = '\0';

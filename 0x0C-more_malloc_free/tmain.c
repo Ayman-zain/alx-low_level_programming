@@ -9,11 +9,12 @@ char *string_nconcat(char *, char *, unsigned int);
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	char *s;
 
-	s = string_nconcat("Hello", "", 12);
+	s = string_nconcat("Best ", "School", 4);
 	if (s == NULL)
 	{
 		printf("failed\n");
