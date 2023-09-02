@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_bit - a function that returns the value of a bit at a given index.
+ * set_bit - a function that sets the value of a bit to 1 at a given index. 
  * @n: number given.
  * @index: the index
  * Return:  value of the bit at index or -1 if an error occured
