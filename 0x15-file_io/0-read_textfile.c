@@ -1,17 +1,4 @@
 #include "main.h"
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 /**
  *  read_textfile - function that reads a text file and prints it to stdout.
  * @filename: its the file name
@@ -21,18 +8,16 @@ int _putchar(char c)
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 ssize_t s = 0;
-FILE *fd;
+int fd;
+char c[1024 * 8];
 
-fd = fopen(filename, "r");
-if (fd == NULL)
+if (!filename || !letters)
 	return (0);
-while (letters--)
-{
-char c = fgetc(fd);
-if (c == EOF)
-	break;
-s += _putchar(c);
-
-}
+fd = open(filename, O_RDONLY);
+if (fd == -1)
+	return (0);
+s = read(fd, &c[0], letters);
+s = write(STDOUT_FILENO, &c[0], s);
+close(fd);
 return (s);
 }
