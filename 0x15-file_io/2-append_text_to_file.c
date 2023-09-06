@@ -1,5 +1,6 @@
 #include <string.h>
 #include "main.h"
+int _strlen(char *c);
 /**
  *  append_text_to_file - a function that appends text at the end of a file.
  * @filename: the name of the file
@@ -9,18 +10,33 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
-ssize_t c = 0, l = strlen(text_content);
+ssize_t c = 0, l = _strlen(text_content);
 
 if (!filename)
-        return (-1);
+	return (-1);
 fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
-        return (-1);
+	return (-1);
 if (l)
-        c = write(fd, text_content, l);
+	c = write(fd, text_content, l);
 close(fd);
 if (l == c)
-        return (1);
+	return (1);
 else
-        return (-1);
+	return (-1);
+}
+/**
+ * _strlen - return the length of string
+ * @s: the string
+ * Return the length
+ */
+int _strlen(char *c)
+{
+int n = 0;
+
+if (!c)
+	return (0);
+while (*c++)
+	n++;
+return (n);
 }
