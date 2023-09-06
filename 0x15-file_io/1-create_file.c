@@ -1,5 +1,21 @@
-#include <string.h>
 #include "main.h"
+
+/**
+ * _strlen - return the length of string
+ * @c: the string
+ * Return: the length
+ */
+int _strlen(char *c)
+{
+int n = 0;
+
+if (!c)
+	return (0);
+while (*c++)
+	n++;
+return (n);
+}
+
 /**
  * create_file - a function that creates a file.
  * @filename: the name of the file
@@ -9,7 +25,7 @@
 int create_file(const char *filename, char *text_content)
 {
 int fd;
-ssize_t c = 0, l = strlen(text_content);
+int c = 0, l = _strlen(text_content);
 
 if (!filename)
 	return (-1);

@@ -1,6 +1,21 @@
-#include <string.h>
 #include "main.h"
-int _strlen(char *c);
+
+/**
+ * _strlen - return the length of string
+ * @c: the string
+ * Return: the length
+ */
+int _strlen(char *c)
+{
+int n = 0;
+
+if (!c)
+	return (0);
+while (*c++)
+	n++;
+return (n);
+}
+
 /**
  *  append_text_to_file - a function that appends text at the end of a file.
  * @filename: the name of the file
@@ -24,19 +39,4 @@ if (l == c)
 	return (1);
 else
 	return (-1);
-}
-/**
- * _strlen - return the length of string
- * @s: the string
- * Return the length
- */
-int _strlen(char *c)
-{
-int n = 0;
-
-if (!c)
-	return (0);
-while (*c++)
-	n++;
-return (n);
 }
