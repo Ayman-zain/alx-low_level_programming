@@ -9,7 +9,7 @@ int TwoPow(int p)
 {
 	int r = 1;
 
-	if(p == 0)
+	if (p == 0)
 		return (1);
 	while (p--)
 		r = r * 2;
@@ -34,9 +34,9 @@ while (b[size] != '\0')
 pow = size - 1;
 for (i = 0; i < size; i++)
 {
-	 if ((b[i] != '0') && (b[i] != '1'))
-                return(0);
-	 else if (b[i] == '1')
+	if ((b[i] != '0') && (b[i] != '1'))
+		return (0);
+	else if (b[i] == '1')
 		dec = dec + TwoPow(pow);
 	pow--;
 }
