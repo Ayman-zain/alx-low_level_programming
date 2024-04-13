@@ -17,3 +17,4 @@ hash_table_t *hash_table_create(unsigned long int size){
 	table->size = size;
 	table->array   = (Ht_item**) calloc(table->size, sizeof(Ht_item*));
 }
+
