@@ -6,15 +6,26 @@
  * Return:  a pointer to the newly created hash table or NULL
  */
 
-hash_table_t *hash_table_create(unsigned long int size){
-	hash_table_s* table = (hash_table_s*) malloc(sizeof(hash_table_s*));
-	if(!table)
+hash_table_t *hash_table_create(unsigned long int size)
+{
+	hash_table_t *table = (hash_table_t *) malloc(sizeof(hash_table_t));
+	int i;
+
+	if (!table)
 	{
-		return (NULL)
+		return (NULL);
 	}
-	else
-		return (table)
+	table->array = (hash_node_t **)calloc(size, sizeof(hash_node_t *));
+	if (!table->array)
+	{
+		free(table);
+		return (NULL);
+	}
+	for (i = 0; (unsigned long int)i < size; i++)
+	{
+		table->array[i] = NULL;
+	}
 	table->size = size;
-	table->array   = (Ht_item**) calloc(table->size, sizeof(Ht_item*));
+	return (table);
 }
 
